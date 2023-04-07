@@ -20,8 +20,11 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Output
+build
 dist
 dist-ssr
+cjs
+esm
 
 
 # Editor
@@ -40,6 +43,7 @@ node_modules
 *.sln
 *.sw?
 *.local
+*.tgz
 
 # misc
 .DS_Store
