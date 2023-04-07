@@ -1,0 +1,50 @@
+{
+  "name": "@everqin/types",
+  "version": "0.0.1",
+  "description": "Typescript definitions for Everqin Teams. 适用于 Everqin Teams 的 Typescript 通用类型定义。",
+  "author": "handpear<handpear@outlook.com>",
+  "type": "module",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "src"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "types",
+    "everqin-types"
+  ],
+  "homepage": "https://github.com/Handpear/everqin-types.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Handpear/everqin-types.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Handpear/everqin-types/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "release": "pnpm publish --no-git-checks",
+    "type:check": "tsc --noEmit --skipLibCheck",
+    "lint": "pnpm lint:eslint && pnpm lint:prettier",
+    "lint:eslint": "eslint --fix \"**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,vue}\"",
+    "lint:prettier": "prettier --write \"**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,css,less,scss,json,vue,html,md}\""
+  },
+  "dependencies": {
+    "ts-toolbelt": "^9.6.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.37.0",
+    "eslint-config-everqin": "^0.0.3",
+    "prettier": "^2.8.7",
+    "rimraf": "^4.4.1",
+    "typescript": "^5.0.3"
+  },
+  "peerDependencies": {
+    "typescript": ">=4.7.4"
+  }
+}
