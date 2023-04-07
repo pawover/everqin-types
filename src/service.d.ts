@@ -24,7 +24,7 @@ declare namespace Res {
   interface Base<T = unknown> {
     code: number;
     data: T;
-    message: string;
+    msg: string;
   }
 
   /** 分页类型数据 */
