@@ -18,7 +18,7 @@ declare namespace Req {
  */
 declare namespace Res {
   /** Promise Object */
-  interface Promises<T> extends Promise<Base<T>> {}
+  interface Promises<T = unknown> extends Promise<Base<T>> {}
 
   /** Base Object */
   interface Base<T = unknown> {
