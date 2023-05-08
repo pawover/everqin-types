@@ -1,6 +1,6 @@
 {
   "name": "@everqin/types",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Typescript definitions for Everqin Teams. 适用于 Everqin Teams 的 Typescript 通用类型定义。",
   "author": "handpear<handpear@outlook.com>",
   "type": "module",
@@ -30,17 +30,22 @@
     "type:check": "tsc --noEmit --skipLibCheck",
     "lint": "pnpm lint:eslint && pnpm lint:prettier",
     "lint:eslint": "eslint --fix \"**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,vue}\"",
-    "lint:prettier": "prettier --write \"**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,css,less,scss,json,vue,html,md}\""
+    "lint:prettier": "prettier --write \"**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,css,less,scss,json,vue,html,md}\"",
+    "clean:lib": "rimraf node_modules",
+    "lib:up": "taze -I --exclude pnpm",
+    "reinstall": "rimraf pnpm-lock.yaml && pnpm clean:lib & pnpm install",
+    "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "@typescript-eslint/parser": "^5.57.1",
-    "eslint": "^8.37.0",
-    "eslint-config-everqin": "^0.0.3",
-    "prettier": "^2.8.7",
-    "rimraf": "^4.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
+    "eslint": "^8.40.0",
+    "eslint-config-everqin": "^0.0.6",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.0",
+    "taze": "^0.10.1",
     "ts-toolbelt": "^9.6.0",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   },
   "peerDependencies": {
     "ts-toolbelt": ">=9.6.0",

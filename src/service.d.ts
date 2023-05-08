@@ -1,10 +1,10 @@
 /**
- * 包括常用的接口请求参数
+ * 包括常用的接口请求类型
  *
  * @namespace Req 服务请求
  */
 declare namespace Req {
-  /** 分页请求参数 */
+  /** Page Object */
   interface Page {
     page: number;
     pageSize: number;
@@ -12,37 +12,37 @@ declare namespace Req {
 }
 
 /**
- * 包括常用的接口响应数据
+ * 包括常用的接口响应类型
  *
  * @namespace Res 服务响应
  */
 declare namespace Res {
-  /** 接口响应类型 */
-  type Data<T = unknown> = Promise<Base<T>>;
+  /** Promise Object */
+  interface Promises<T> extends Promise<Base<T>> {}
 
-  /** 响应对象 */
+  /** Base Object */
   interface Base<T = unknown> {
     code: number;
     data: T;
     msg: string;
   }
 
-  /** 分页类型数据 */
-  interface PageList<Rows extends unknown[] = unknown[]> {
+  /** Page Object */
+  interface Page<Rows extends unknown[] = unknown[]> {
     page: number;
     pageSize: number;
     total: number;
     rows: Rows;
   }
 
-  /** 文件上传 */
+  /** FileUpload Response Data */
   interface FileUpload {
     filePath: string;
     newName: string;
     originName: string;
   }
 
-  /** 文件数据 */
+  /** File Data */
   interface File extends FileUpload {
     readonly id: number;
     relatedId: number;
@@ -51,10 +51,20 @@ declare namespace Res {
     updateTime: string;
   }
 
-  /** 后端枚举 */
+  /** Enum Object */
   interface EnumType {
     label: string;
     value: number;
     type: string;
   }
+
+  interface UidAndTimeKey {
+    create: string;
+    update: string;
+  }
+
+  /** UidAndTime */
+  interface UidAndTime<T>
+    extends Record<`${keyof UidAndTimeKey}Uid`, number>,
+      Record<`${keyof UidAndTimeKey}Time`, T | null> {}
 }
