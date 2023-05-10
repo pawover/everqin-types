@@ -64,7 +64,7 @@ declare namespace Res {
   }
 
   /** UidAndTime */
-  interface UidAndTime<T>
+  interface UidAndTime<T = unknown>
     extends Record<`${keyof UidAndTimeKey}Uid`, number>,
       Record<`${keyof UidAndTimeKey}Time`, T | null> {}
 }
