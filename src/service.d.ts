@@ -57,14 +57,4 @@ declare namespace Res {
     value: number;
     type: string;
   }
-
-  interface UidAndTimeKey {
-    create: string;
-    update: string;
-  }
-
-  /** UidAndTime */
-  interface UidAndTime<T = unknown>
-    extends Record<`${keyof UidAndTimeKey}Uid`, number>,
-      Record<`${keyof UidAndTimeKey}Time`, T | null> {}
 }
