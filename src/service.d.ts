@@ -5,9 +5,9 @@
  */
 declare namespace Req {
   /** Page Object */
-  interface Page {
-    page: number;
-    pageSize: number;
+  interface Page<T = unknown> extends Record<keyof any, T> {
+    page?: number | undefined;
+    pageSize?: number | undefined;
   }
 }
 
