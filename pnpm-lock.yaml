@@ -15,8 +15,8 @@ devDependencies:
     specifier: ^8.45.0
     version: 8.45.0
   eslint-config-everqin:
-    specifier: ^0.0.10
-    version: 0.0.10(@typescript-eslint/eslint-plugin@6.2.0)(@typescript-eslint/parser@6.2.0)(eslint@8.45.0)(typescript@5.1.6)
+    specifier: ^0.0.11
+    version: 0.0.11(@typescript-eslint/eslint-plugin@6.2.0)(@typescript-eslint/parser@6.2.0)(eslint@8.45.0)(typescript@5.1.6)
   prettier:
     specifier: ^3.0.0
     version: 3.0.0
@@ -756,8 +756,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-everqin@0.0.10(@typescript-eslint/eslint-plugin@6.2.0)(@typescript-eslint/parser@6.2.0)(eslint@8.45.0)(typescript@5.1.6):
-    resolution: {integrity: sha512-eIMab5oR6ZJEPk3m7eMr/tK+10NsTjOQNlwhc6F4mj/VI9aQxawdyfzLAPM2m2jQt5AxCYWYJ7K7RCucTbxYLQ==}
+  /eslint-config-everqin@0.0.11(@typescript-eslint/eslint-plugin@6.2.0)(@typescript-eslint/parser@6.2.0)(eslint@8.45.0)(typescript@5.1.6):
+    resolution: {integrity: sha512-KI/4RzhjQC0Lm4yZw559KJX0zu0Ce4awTaGXq/LVm8Rk64MwFq28yhVVwPQymiyW3/i/ay+tqF0sxfIeiyzbCg==}
     engines: {node: '>=16', pnpm: '>=8'}
     peerDependencies:
       '@babel/eslint-parser': 7.x
