@@ -1,6 +1,9 @@
 {
   "root": true,
   "extends": ["everqin", "everqin/typescript"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "rules": {
     "@typescript-eslint/no-explicit-any": ["off"]
   }
