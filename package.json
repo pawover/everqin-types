@@ -4,9 +4,10 @@
   "description": "Typescript definitions for Everqin Teams. 适用于 Everqin Teams 的 Typescript 通用类型定义。",
   "author": "handpear<handpear@outlook.com>",
   "type": "module",
-  "typings": "types/index.d.ts",
+  "typings": "index.d.ts",
   "files": [
-    "types/service.d.ts"
+    "index.d.ts",
+    "service.d.ts"
   ],
   "license": "MIT",
   "keywords": [
