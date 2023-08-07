@@ -5,7 +5,7 @@
  */
 declare namespace Req {
   /** Page Object */
-  interface Page<T = unknown> extends Record<keyof any, T> {
+  interface Page<T = unknown> extends Record<Key, T> {
     page?: number | undefined;
     pageSize?: number | undefined;
   }
@@ -28,11 +28,22 @@ declare namespace Res {
   }
 
   /** Page Object */
-  interface Page<Rows extends unknown[] = unknown[]> {
+  interface Page<Row = Obj> {
     page: number;
     pageSize: number;
     total: number;
-    rows: Rows;
+    rows: Row[];
+  }
+
+  /**
+   * Page Object
+   * @deprecated 1.0接口返回数据
+   */
+  interface PageDeprecated<Row = Obj> {
+    page: number;
+    pageSize: number;
+    totalSize: number;
+    datas: Row[];
   }
 
   /** FileUpload Response Data */
